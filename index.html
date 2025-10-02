@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        table, th, td{
-            border: 1px solid black;
-            border-collapse: collapse;
-        }        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualización Tributaria</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
-    <header> 
-        <h1>😎¡Registrate en nuestro gran evento de Actualización Tributaria!😎</h1>
-        <img src="https://www.sisepuedeecuador.com/wp-content/uploads/2024/07/a6f18bcd0b46413951a75b9840a8448e.jpg" alt="Curso Impuestos">
-    </header>
- 
-    <main>
-        <h1>Detalles del evento</h1>
-        <p>Has parte de este excelente evento de actualización. ¡No te lo pierdas!.</p>
-        <a href="Descripción.html">
-            Mira aquí el clip de presentación
-        </a>
-         
-    </main>
-    <body>
-        <table style="width: 50%;"> 
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Actualización Tributaria</h1>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="description.html">Descripción</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="image-section">
+      <h2>😎¡Registrate en nuestro gran evento de Actualización Tributaria!😎</h2>
+      <img src="https://www.sisepuedeecuador.com/wp-content/uploads/2024/07/a6f18bcd0b46413951a75b9840a8448e.jpg" alt="Curso Impuestos">
+    </section>
+
+    <section class="table-section">
+      <h2>Tabla de Datos</h2>
+      <table> 
             <tr>
                 <th>Capacitacion</th>
                 <th>Intensidad horaria</th>
@@ -60,39 +57,31 @@
                 </td>
             </tr>
         </table>
-        <div>
-         <form action="#" class="Formulario" method="post"> <!--action="#" redirecciona a la misma página, ,method get envía la info a la URL-->
-            <h1>Formulario de Registro</h1>
-            <label for="nom">Nombre Completo</label>
-            <input type="text" id="nom" name="nom" placeholder="Escribe tu nombre"> <!--placeholder es el texto fantasma-->
-            <label for="ema">Correo Electrónico</label>
-            <input type="email" id="ema" name="ema" placeholder="ejemplo@correo.co">
-            <label for="nom">Teléfono</label>
-            <input type="text" id="nom" name="nom" placeholder="Escribe tu Teléfono"> <!--placeholder es el texto fantasma-->
-            <p>Por favor seleccione el curso de su interés:</p>
-            
-            <label for="Natural"> 
-                Renta Natural <input type="radio" id="Natural" name="curso" value="Natural" /></label><br/>
-            <input type="radio" id="Jurídica" name="curso" value="Jurídica" />Renta Jurídica <br/>
-            <!--<label for="Jurídica">Renta Jurídica</label><br>-->
-            <input type="radio" id="Exógena" name="curso" value="Exógena" />Exógena <br/> 
-            <!--<label for="Exógena">Exógena</label><br>-->          
-            <!--<label for="Natural"></label>-->
-            <button class="full-width-btn" type="submit">Registrarse</button>
-            <label for="tex">Comentarios Adicionales</label>
-            <textarea name="" id="tex" name="tex" placeholder="Escribe tu sugerencia"></textarea>
-        </form>
-        </div>
-        <!--<form action="#" class="Formulario" method="post">-->
-            
+    </section>
 
+    <section class="form-section">
+      <h2>Formulario de Registro</h2>
+      <form>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
 
-        <!--</form>-->
-    </body>
- 
-    <footer>
-        <p>&copy; 2025 Mi evento genial. Todos los derechos reservados.</p>
-    </footer>
- 
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="ejemplo@email.com" required>
+
+        <label for="categoria">Categoría</label>
+        <select id="categoria" name="categoria">
+          <option value="estudiante">Estudiante</option>
+          <option value="profesional">Profesional</option>
+          <option value="docente">Docente</option>
+        </select>
+
+        <button type="submit" class="btn">Registrarse</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Actualización Tributaria | Desarrollado con HTML & CSS</p>
+  </footer>
 </body>
 </html>
